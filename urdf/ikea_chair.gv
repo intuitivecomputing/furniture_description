@@ -1,0 +1,35 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"back_part" [label="back_part"];
+"backrest" [label="backrest"];
+"backrest_left_hole_1" [label="backrest_left_hole_1"];
+"backrest_left_hole_2" [label="backrest_left_hole_2"];
+"backrest_right_hole_1" [label="backrest_right_hole_1"];
+"backrest_right_hole_2" [label="backrest_right_hole_2"];
+"cushion" [label="cushion"];
+"front_part" [label="front_part"];
+"left_part" [label="left_part"];
+"right_part" [label="right_part"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "back_part_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"back_part_joint" -> "back_part"
+"world" -> "backrest_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"backrest_joint" -> "backrest"
+"backrest" -> "backrest_left_hole_1_joint" [label="xyz: -0.1 -0.01 0 \nrpy: 0 1.5708 -0"]
+"backrest_left_hole_1_joint" -> "backrest_left_hole_1"
+"backrest" -> "backrest_left_hole_2_joint" [label="xyz: -0.1 -0.042 0 \nrpy: 0 1.5708 -0"]
+"backrest_left_hole_2_joint" -> "backrest_left_hole_2"
+"backrest" -> "backrest_right_hole_1_joint" [label="xyz: 0.1 -0.01 0 \nrpy: 0 1.5708 -0"]
+"backrest_right_hole_1_joint" -> "backrest_right_hole_1"
+"backrest" -> "backrest_right_hole_2_joint" [label="xyz: 0.1 -0.042 0 \nrpy: 0 1.5708 -0"]
+"backrest_right_hole_2_joint" -> "backrest_right_hole_2"
+"world" -> "cushion_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"cushion_joint" -> "cushion"
+"world" -> "front_part_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"front_part_joint" -> "front_part"
+"world" -> "left_part_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_part_joint" -> "left_part"
+"world" -> "right_part_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_part_joint" -> "right_part"
+}

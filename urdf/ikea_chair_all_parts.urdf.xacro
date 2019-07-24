@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot  name="ikea_chair"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<link name="world"/>  
+
+	<!-- backrest -->
+	<xacro:include filename="$(find furniture_description)/urdf/ikea_chair_backrest.xacro" /> 
+	<xacro:backrest link_name = "backrest" color="Blue" />
+
+	<xacro:include filename="$(find furniture_description)/urdf/ikea_chair_side_part.xacro" /> 
+	<!-- left part -->
+	<xacro:side_part link_name = "left" reflect="1" color="Green"/>
+	<!-- right part -->
+	<xacro:side_part link_name = "right" reflect ="-1" color="Yellow"/>
+
+	<xacro:include filename="$(find furniture_description)/urdf/ikea_chair_front_part.xacro" /> 
+	<!-- left part -->
+	<xacro:front_part link_name = "frontbeam" reflect="1" color="Pink"/>
+	<!-- right part -->
+	<xacro:front_part link_name = "backbeam" reflect ="-1" color="Red"/>
+
+	<!-- cushion -->
+	<xacro:include filename="$(find furniture_description)/urdf/ikea_chair_cushion.xacro" /> 
+	<xacro:cushion link_name = "cushion" color="White"/>
+</robot>

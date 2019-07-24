@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot name="ikea_chair_backrest" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- Import Rviz colors -->
+<xacro:include filename="$(find furniture_description)/urdf/materials.xacro" />
+
+<xacro:macro name="backrest" params="link_name color">
+	<link name="${link_name}">
+	  <visual>
+		<origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+		<geometry>
+		    <mesh filename="package://furniture_description/meshes/backrest.STL"/>
+		</geometry>
+		<material name="${color}"/>
+	  </visual>
+	  <collision>
+		<origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+		<geometry>
+		     <mesh filename="package://furniture_description/meshes/backrest.STL"/>
+		</geometry>
+	  </collision>
+	</link>
+
+	<joint name="${link_name}_joint" type="floating">
+		<parent link="world" />
+		<child link = "${link_name}" />
+	</joint>
+
+	<link name="${link_name}_hole_1_1"/>
+	<link name="${link_name}_hole_1_2"/>
+
+	<joint name="${link_name}_hole_1_1_joint" type="fixed">
+		<parent link="${link_name}" />
+		<child link = "${link_name}_hole_1_1" />
+		<origin xyz="-0.1 0.0 0.0" rpy="0 ${-pi/2} 0" />  
+	</joint>
+
+	<joint name="${link_name}_hole_1_2_joint" type="fixed">
+		<parent link="${link_name}" />
+		<child link = "${link_name}_hole_1_2" />
+		<origin xyz="-0.1 -0.032 0.0" rpy="0 ${-pi/2} 0" />  
+	</joint>
+
+
+	<link name="${link_name}_hole_2_1"/>
+	<link name="${link_name}_hole_2_2"/>
+
+	<joint name="${link_name}_hole_2_1_joint" type="fixed">
+		<parent link="${link_name}" />
+		<child link = "${link_name}_hole_2_1" />
+		<origin xyz="0.1 -0.0 0.0" rpy="0 ${pi/2} 0" />  
+	</joint>
+
+	<joint name="${link_name}_hole_2_2_joint" type="fixed">
+		<parent link="${link_name}" />
+		<child link = "${link_name}_hole_2_2" />
+		<origin xyz="0.1 -0.032 0.0" rpy="0 ${pi/2} 0" />  
+	</joint>
+
+</xacro:macro>
+
+</robot>
