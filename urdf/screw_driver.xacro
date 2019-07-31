@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot name="Ikea_chair_side_file" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="screw_driver" params="link_name color">
+	<link name="${link_name}">
+	  <visual>
+		<origin xyz="0 -0.05 -0.005" rpy="0 0 0" />
+		<geometry>
+			<box size="0.0125 0.105 0.01" />    
+		</geometry>
+		<material name="${color}"/>
+	  </visual>
+	  <visual>
+		<origin xyz="0 0 -0.0125" rpy="0 0 0" />
+		<geometry>
+			<cylinder radius="0.0025" length="0.025"/>  
+		</geometry>
+		<material name="${color}"/>
+	  </visual>
+
+	  <collision>
+		<origin xyz="0 -0.05 -0.005" rpy="0 0 0" />
+		<geometry>
+			<box size="0.0125 0.105 0.01" />    
+		</geometry>
+	  </collision>
+	  <collision>
+		<origin xyz="0 0 -0.0125" rpy="0 0 0" />
+		<geometry>
+			<cylinder radius="0.0025" length="0.025"/>  
+		</geometry>
+	  </collision>
+
+		<inertial>
+			<mass value="1" />
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+		</inertial>
+	</link>
+
+
+	
+	<gazebo reference="${link_name}">
+		<material>Gazebo/${color}</material>
+		<mu1>0.2</mu1>
+		<mu2>0.2</mu2>
+	</gazebo>
+</xacro:macro>
+
+</robot>

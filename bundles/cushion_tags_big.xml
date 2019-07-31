@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<multimarker markers="8">
+    <marker index="16" status="1">
+        <corner x="-4.95" y="1.65" z="0.65" />
+        <corner x="-1.65" y="1.65" z="0.65" />
+        <corner x="-1.65" y="4.95" z="0.65" />
+        <corner x="-4.95" y="4.95" z="0.65" />
+    </marker>
+    <marker index="19" status="1">
+        <corner x="1.65" y="1.65" z="0.65" />
+        <corner x="4.95" y="1.65" z="0.65" />
+        <corner x="4.95" y="4.95" z="0.65" />
+        <corner x="1.65" y="4.95" z="0.65" />
+    </marker>
+    <marker index="20" status="1">
+        <corner x="1.65" y="-4.95" z="0.65" />
+        <corner x="4.95" y="-4.95" z="0.65" />
+        <corner x="4.95" y="-1.65" z="0.65" />
+        <corner x="1.65" y="-1.65" z="0.65" />
+    </marker>
+    <marker index="17" status="1">
+        <corner x="-4.95" y="-4.95" z="0.65" />
+        <corner x="-1.65" y="-4.95" z="0.65" />
+        <corner x="-1.65" y="-1.65" z="0.65" />
+        <corner x="-4.95" y="-1.65" z="0.65" />
+    </marker>
+
+    <marker index="36" status="1">
+        <corner x="4.95" y="1.65" z="-0.65" />
+        <corner x="1.65" y="1.65" z="-0.65" />
+        <corner x="1.65" y="4.95" z="-0.65" />
+        <corner x="4.95" y="4.95" z="-0.65" />
+    </marker>
+    <marker index="37" status="1">
+        <corner x="-1.65" y="1.65" z="-0.65" />
+        <corner x="-4.95" y="1.65" z="-0.65" />
+        <corner x="-4.95" y="4.95" z="-0.65" />
+        <corner x="-1.65" y="4.95" z="-0.65" />
+    </marker>
+    <marker index="38" status="1">
+        <corner x="-1.65" y="-4.95" z="-0.65" />
+        <corner x="-4.95" y="-4.95" z="-0.65" />
+        <corner x="-4.95" y="-1.65" z="-0.65" />
+        <corner x="-1.65" y="-1.65" z="-0.65" />
+    </marker>
+    <marker index="39" status="1">
+        <corner x="4.95" y="-4.95" z="-0.65" />
+        <corner x="1.65" y="-4.95" z="-0.65" />
+        <corner x="1.65" y="-1.65" z="-0.65" />
+        <corner x="4.95" y="-1.65" z="-0.65" />
+    </marker>
+</multimarker>

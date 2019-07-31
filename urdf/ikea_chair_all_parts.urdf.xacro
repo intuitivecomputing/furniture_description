@@ -22,4 +22,8 @@
 	<!-- cushion -->
 	<xacro:include filename="$(find furniture_description)/urdf/ikea_chair_cushion.xacro" /> 
 	<xacro:cushion link_name = "cushion" color="White"/>
+
+	<!-- screw driver -->
+	<xacro:include filename="$(find furniture_description)/urdf/screw_driver.xacro" /> 
+	<xacro:screw_driver link_name = "ar_marker_11" color="White"/>
 </robot>
