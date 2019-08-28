@@ -61,13 +61,13 @@
 	<joint name="${link_name}_hole_3_1_joint" type="fixed">
 		<parent link="${link_name}" />
 		<child link = "${link_name}_hole_3_1" />
-		<origin xyz="-0.048 -0.0225 0.0" rpy="${pi/2} 0  0" />  
+		<origin xyz="-0.048 0.0225 0.0" rpy="${-pi/2} 0  0" />  
 	</joint>
 
 	<joint name="${link_name}_hole_3_2_joint" type="fixed">
 		<parent link="${link_name}" />
 		<child link = "${link_name}_hole_3_2" />
-		<origin xyz="0.048 -0.0225 0.0" rpy="${pi/2} 0 0" />  
+		<origin xyz="0.048 0.0225 0.0" rpy="${-pi/2} 0 0" />  
 	</joint>
 	
 </xacro:macro>
